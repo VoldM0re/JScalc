@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>JSCalc</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+    <div class='app'>
+        <input rows='1' class='field' placeholder='Можно вводить и с клавиатуры!'
+            onkeypress="return /[0-9\+\-\*\/]/i.test(event.key)">
+        <div class='buttons'>
+            <div class='actions'>
+                <input class='action button' type='button' value='C'>
+                <div class='action button' id='erase'><img src='erase.svg'></div>
+                <input class='action button' type='button' value='=' id='eq'>
+            </div>
+            <div class='math'>
+                <div class='nums'>
+                </div>
+                <div class='operands'>
+                    <input class='operand button' type='button' value='+'>
+                    <input class='operand button' type='button' value='-'>
+                    <input class='operand button' type='button' value='*'>
+                    <input class='operand button' type='button' value='/'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
