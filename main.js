@@ -31,8 +31,10 @@ function writeToField(elem) {
         prevPressed = '';
     } else if (val === '=') {
         try {
-            result = eval(field.value);
-            field.value = result;
+            if (field.value.slice(0, -1) != '') {
+                result = eval(field.value);
+                field.value = result;
+            }
         } catch (error) {
             field.value = 'Ошибка';
         }
